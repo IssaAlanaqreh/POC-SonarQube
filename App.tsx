@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
@@ -8,6 +9,15 @@ export default function App() {
       break;
     }
   };
+
+  const check = (a, b) => {
+    return a == b;
+  };
+
+  useEffect(() => {
+    check(1, 2);
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
